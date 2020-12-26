@@ -32,6 +32,7 @@ namespace WebProje
                     Configuration.GetConnectionString("DefaultConnection")));
             services.AddDefaultIdentity<IdentityUser>(options => options.SignIn.RequireConfirmedAccount = true)
                 .AddEntityFrameworkStores<ApplicationDbContext>();
+           // services.AddDbContext<HayvanBarinagiContext>(options => options.UseSqlServer(connection));
             services.AddControllersWithViews();
             services.AddRazorPages();
         }
