@@ -1,17 +1,17 @@
 {
   "format": 1,
   "restore": {
-    "C:\\Users\\kubra\\source\\repos\\WebProje\\WebProje\\WebProje.csproj": {}
+    "C:\\Users\\kubra\\Documents\\GitHub\\WebProjesi\\WebProje\\WebProje\\WebProje.csproj": {}
   },
   "projects": {
-    "C:\\Users\\kubra\\source\\repos\\WebProje\\WebProje\\WebProje.csproj": {
+    "C:\\Users\\kubra\\Documents\\GitHub\\WebProjesi\\WebProje\\WebProje\\WebProje.csproj": {
       "version": "1.0.0",
       "restore": {
-        "projectUniqueName": "C:\\Users\\kubra\\source\\repos\\WebProje\\WebProje\\WebProje.csproj",
+        "projectUniqueName": "C:\\Users\\kubra\\Documents\\GitHub\\WebProjesi\\WebProje\\WebProje\\WebProje.csproj",
         "projectName": "WebProje",
-        "projectPath": "C:\\Users\\kubra\\source\\repos\\WebProje\\WebProje\\WebProje.csproj",
+        "projectPath": "C:\\Users\\kubra\\Documents\\GitHub\\WebProjesi\\WebProje\\WebProje\\WebProje.csproj",
         "packagesPath": "C:\\Users\\kubra\\.nuget\\packages\\",
-        "outputPath": "C:\\Users\\kubra\\source\\repos\\WebProje\\WebProje\\obj\\",
+        "outputPath": "C:\\Users\\kubra\\Documents\\GitHub\\WebProjesi\\WebProje\\WebProje\\obj\\",
         "projectStyle": "PackageReference",
         "configFilePaths": [
           "C:\\Users\\kubra\\AppData\\Roaming\\NuGet\\NuGet.Config",
