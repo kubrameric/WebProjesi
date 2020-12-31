@@ -1,3 +1,1 @@
-# WebProjesi
-
-Bu bir web projesidir.
+Bu projede hayvanların tanıtıldığı ve sahiplendirme işlemlerinin yapılabildiği hayvan sahiplendirme sitesi bulunmaktadır. Bir anasayfamız bulunmaktadır ve bir de ilanlar adı altında bir sayfa bulunmaktadır. Mailimiz ile üye olduktan sonra ilanlar sayfası görüntülenebilmektedir. Ayrıca admin paneli de içerecektir. Admin panelinden ilan ekleme işlemleri yapılabilecektir. 
