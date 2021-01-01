@@ -14,7 +14,7 @@ namespace WebProje.Models
         public int hayvanYasi { get; set; }
         public string hayvanCinsi { get; set; }
         public string hayvanCinsiyeti { get; set; }
-        public Ilanlar Ilanlar { get; set; }
+        public virtual Ilanlar Ilanlar { get; set; }
 
     }
 }

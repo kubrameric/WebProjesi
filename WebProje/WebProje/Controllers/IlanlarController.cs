@@ -2,6 +2,7 @@
 using System.Collections.Generic;
 using System.Linq;
 using System.Threading.Tasks;
+using Microsoft.AspNetCore.Authorization;
 using Microsoft.AspNetCore.Mvc;
 using Microsoft.AspNetCore.Mvc.Rendering;
 using Microsoft.EntityFrameworkCore;
@@ -20,9 +21,11 @@ namespace WebProje.Controllers
         }
 
         // GET: Ilanlar
+        [Authorize]
         public async Task<IActionResult> Index()
         {
-            return View(await _context.Ilanlar.ToListAsync());
+            var model = _context.Ilanlar.Include(x => x.hayvan);
+            return View(await model.ToListAsync());
         }
 
         // GET: Ilanlar/Details/5

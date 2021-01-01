@@ -7,7 +7,7 @@ using WebProje.Models;
 
 namespace WebProje.Data
 { 
-    public class ApplicationDbContext : IdentityDbContext
+    public class ApplicationDbContext : IdentityDbContext<UserDetails>
     {
         public DbSet<Hayvanlar> Hayvanlar { get; set; }
         public DbSet<Ilanlar> Ilanlar { get; set; }

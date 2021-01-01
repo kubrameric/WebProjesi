@@ -1,6 +1,7 @@
 ﻿using System;
 using System.Collections.Generic;
 using System.ComponentModel.DataAnnotations;
+using System.ComponentModel.DataAnnotations.Schema;
 using System.Linq;
 using System.Threading.Tasks;
 
@@ -14,6 +15,7 @@ namespace WebProje.Models
         public int hayvanId { get; set; }
 
         public DateTime ilanTarihi { get; set; }
-        public ICollection<Hayvanlar> hayvan { get; set; }
+        [ForeignKey("hayvanId")]
+        public virtual Hayvanlar hayvan { get; set; }
     }
 }

@@ -121,7 +121,6 @@ C:\Users\kubra\Documents\GitHub\WebProjesi\WebProje\WebProje\obj\Debug\netcoreap
 C:\Users\kubra\Documents\GitHub\WebProjesi\WebProje\WebProje\obj\Debug\netcoreapp3.0\WebProje.csproj.CopyComplete
 C:\Users\kubra\Documents\GitHub\WebProjesi\WebProje\WebProje\obj\Debug\netcoreapp3.0\WebProje.dll
 C:\Users\kubra\Documents\GitHub\WebProjesi\WebProje\WebProje\obj\Debug\netcoreapp3.0\WebProje.pdb
-C:\Users\kubra\Documents\GitHub\WebProjesi\WebProje\WebProje\obj\Debug\netcoreapp3.0\WebProje.csprojAssemblyReference.cache
 C:\Users\kubra\Documents\GitHub\WebProjesi\WebProje\WebProje\bin\Debug\netcoreapp3.0\Microsoft.AspNetCore.Razor.Language.dll
 C:\Users\kubra\Documents\GitHub\WebProjesi\WebProje\WebProje\bin\Debug\netcoreapp3.0\Microsoft.CodeAnalysis.dll
 C:\Users\kubra\Documents\GitHub\WebProjesi\WebProje\WebProje\bin\Debug\netcoreapp3.0\Microsoft.CodeAnalysis.CSharp.dll
@@ -201,3 +200,19 @@ C:\Users\kubra\Documents\GitHub\WebProjesi\WebProje\WebProje\obj\Debug\netcoreap
 C:\Users\kubra\Documents\GitHub\WebProjesi\WebProje\WebProje\obj\Debug\netcoreapp3.0\Razor\Views\Ilanlar\Details.cshtml.g.cs
 C:\Users\kubra\Documents\GitHub\WebProjesi\WebProje\WebProje\obj\Debug\netcoreapp3.0\Razor\Views\Ilanlar\Edit.cshtml.g.cs
 C:\Users\kubra\Documents\GitHub\WebProjesi\WebProje\WebProje\obj\Debug\netcoreapp3.0\Razor\Views\Ilanlar\Index.cshtml.g.cs
+C:\Users\kubra\Documents\GitHub\WebProjesi\WebProje\WebProje\obj\Debug\netcoreapp3.0\Razor\Views\IlanlarNew\Create.cshtml.g.cs
+C:\Users\kubra\Documents\GitHub\WebProjesi\WebProje\WebProje\obj\Debug\netcoreapp3.0\Razor\Views\IlanlarNew\Delete.cshtml.g.cs
+C:\Users\kubra\Documents\GitHub\WebProjesi\WebProje\WebProje\obj\Debug\netcoreapp3.0\Razor\Views\IlanlarNew\Details.cshtml.g.cs
+C:\Users\kubra\Documents\GitHub\WebProjesi\WebProje\WebProje\obj\Debug\netcoreapp3.0\Razor\Views\IlanlarNew\Edit.cshtml.g.cs
+C:\Users\kubra\Documents\GitHub\WebProjesi\WebProje\WebProje\obj\Debug\netcoreapp3.0\Razor\Views\IlanlarNew\Index.cshtml.g.cs
+C:\Users\kubra\Documents\GitHub\WebProjesi\WebProje\WebProje\obj\Debug\netcoreapp3.0\Razor\Views\Hayvanlars\Create.cshtml.g.cs
+C:\Users\kubra\Documents\GitHub\WebProjesi\WebProje\WebProje\obj\Debug\netcoreapp3.0\Razor\Views\Hayvanlars\Delete.cshtml.g.cs
+C:\Users\kubra\Documents\GitHub\WebProjesi\WebProje\WebProje\obj\Debug\netcoreapp3.0\Razor\Views\Hayvanlars\Details.cshtml.g.cs
+C:\Users\kubra\Documents\GitHub\WebProjesi\WebProje\WebProje\obj\Debug\netcoreapp3.0\Razor\Views\Hayvanlars\Edit.cshtml.g.cs
+C:\Users\kubra\Documents\GitHub\WebProjesi\WebProje\WebProje\obj\Debug\netcoreapp3.0\Razor\Views\Hayvanlars\Index.cshtml.g.cs
+C:\Users\kubra\Documents\GitHub\WebProjesi\WebProje\WebProje\obj\Debug\netcoreapp3.0\Razor\Views\IlanlarYeni\Create.cshtml.g.cs
+C:\Users\kubra\Documents\GitHub\WebProjesi\WebProje\WebProje\obj\Debug\netcoreapp3.0\Razor\Views\IlanlarYeni\Delete.cshtml.g.cs
+C:\Users\kubra\Documents\GitHub\WebProjesi\WebProje\WebProje\obj\Debug\netcoreapp3.0\Razor\Views\IlanlarYeni\Details.cshtml.g.cs
+C:\Users\kubra\Documents\GitHub\WebProjesi\WebProje\WebProje\obj\Debug\netcoreapp3.0\Razor\Views\IlanlarYeni\Edit.cshtml.g.cs
+C:\Users\kubra\Documents\GitHub\WebProjesi\WebProje\WebProje\obj\Debug\netcoreapp3.0\Razor\Views\IlanlarYeni\Index.cshtml.g.cs
+C:\Users\kubra\Documents\GitHub\WebProjesi\WebProje\WebProje\obj\Debug\netcoreapp3.0\WebProje.csprojAssemblyReference.cache

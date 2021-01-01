@@ -56,16 +56,15 @@ button.accept-policy {
 html {
   position: relative;
   min-height: 100%;
+
 }
 
 body {
     /* Margin bottom by footer height */
     margin-bottom: 60px;
-    background-image: url("..//img//anasayfa.png") ;
-    background-position: center;
-    background-repeat: no-repeat;
-    background-size: cover;
-    position:page;
+    background-image: url(../img/anasayfa.png);
+    height: 100% !important;
+    width: 100% !important;
 }
 .footer {
   position: absolute;
@@ -73,4 +72,9 @@ body {
   width: 100%;
   white-space: nowrap;
   line-height: 60px; /* Vertically center the text there */
+}
+.area {
+    background-image: none !important;
+    height:100% !important;
+    width: 100% !important;
 }

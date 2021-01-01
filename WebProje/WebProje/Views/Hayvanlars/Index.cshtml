@@ -1,0 +1,53 @@
+﻿@model IEnumerable<WebProje.Models.Hayvanlar>
+
+@{
+    ViewData["Title"] = "Index";
+}
+
+<h1>Index</h1>
+
+<p>
+    <a asp-action="Create">Create New</a>
+</p>
+<table class="table">
+    <thead>
+        <tr>
+            <th>
+                @Html.DisplayNameFor(model => model.hayvanTuruId)
+            </th>
+            <th>
+                @Html.DisplayNameFor(model => model.hayvanYasi)
+            </th>
+            <th>
+                @Html.DisplayNameFor(model => model.hayvanCinsi)
+            </th>
+            <th>
+                @Html.DisplayNameFor(model => model.hayvanCinsiyeti)
+            </th>
+            <th></th>
+        </tr>
+    </thead>
+    <tbody>
+@foreach (var item in Model) {
+        <tr>
+            <td>
+                @Html.DisplayFor(modelItem => item.hayvanTuruId)
+            </td>
+            <td>
+                @Html.DisplayFor(modelItem => item.hayvanYasi)
+            </td>
+            <td>
+                @Html.DisplayFor(modelItem => item.hayvanCinsi)
+            </td>
+            <td>
+                @Html.DisplayFor(modelItem => item.hayvanCinsiyeti)
+            </td>
+            <td>
+                <a asp-action="Edit" asp-route-id="@item.hayvanId">Edit</a> |
+                <a asp-action="Details" asp-route-id="@item.hayvanId">Details</a> |
+                <a asp-action="Delete" asp-route-id="@item.hayvanId">Delete</a>
+            </td>
+        </tr>
+}
+    </tbody>
+</table>

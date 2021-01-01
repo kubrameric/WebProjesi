@@ -3,7 +3,7 @@
 @{
     ViewData["Title"] = "Index";
 }
-    <div class="container">
+    <div class="container area">
         <div class="row">
             <div class="col-md-4 resim">
                 sdfghjkjhgfds
@@ -13,7 +13,8 @@
                     <a asp-action="Create">Create New</a>
                 </p>
                 <div class="list-group">
-                    @foreach (var item in Model) {
+                    @foreach (var item in Model)
+                    {
                        <a href="">
                            <div ></div>
                            <div>
@@ -22,6 +23,8 @@
                                @Html.DisplayNameFor(model => model.hayvanId)
                                <br />
                                @Html.DisplayNameFor(model => model.ilanTarihi)
+                               <br />
+                               @*@Html.DisplayNameFor(model => )*@
                                <br />
                            </div>
                        </a>
