@@ -31,14 +31,17 @@ namespace WebProje
             services.AddDbContext<ApplicationDbContext>(options =>
                 options.UseSqlServer(
                     Configuration.GetConnectionString("DefaultConnection")));
-            services.AddDefaultIdentity<UserDetails>(options => options.SignIn.RequireConfirmedAccount = true)
+            services.AddIdentity<UserDetails,IdentityRole>()
+                .AddDefaultTokenProviders()
+                .AddDefaultUI()
                 .AddEntityFrameworkStores<ApplicationDbContext>();
             services.Configure<IdentityOptions>(options =>
             {
                 options.Password.RequiredLength = 3;
-                options.Password.RequireDigit =true;
+                options.Password.RequireDigit = true;
+                options.Password.RequireNonAlphanumeric = false;
                 options.Password.RequireLowercase = false;
-                options.Password.RequireLowercase = false;
+                options.Password.RequireUppercase = false;
 
             }); 
            // services.AddDbContext<HayvanBarinagiContext>(options => options.UseSqlServer(connection));

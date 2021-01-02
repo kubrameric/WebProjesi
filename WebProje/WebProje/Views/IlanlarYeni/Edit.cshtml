@@ -2,6 +2,14 @@
 
 @{
     ViewData["Title"] = "Edit";
+    if (User.Identity.IsAuthenticated)
+    {
+        if (User.IsInRole("Admin"))
+        {
+           Layout = "~/Views/Shared/_LayoutAdmin.cshtml";
+        }
+
+    }
 }
 
 <h1>Edit</h1>

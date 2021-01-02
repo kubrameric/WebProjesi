@@ -1,0 +1,51 @@
+﻿<!DOCTYPE html>
+<html lang="tr">
+<head>
+    <meta charset="utf-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>@ViewData["Title"] - Admin Paneli</title>
+    <link rel="stylesheet" href="~/lib/bootstrap/dist/css/bootstrap.min.css" />
+    <link rel="stylesheet" href="~/lib/bootstrap/dist/css/" />
+    <link rel="stylesheet" href="~/css/stil.css" />
+</head>
+<body>
+    <header>
+        <nav class="navbar navbar-expand-sm navbar-toggleable-sm navbar-light bg-white border-bottom box-shadow mb-3" style="margin-bottom:0px !important">
+            <div class="container">
+                <div class="navbar-collapse collapse d-sm-inline-flex flex-sm-row-reverse">
+                    <partial name="_LoginPartial" />
+                </div>
+            </div>
+        </nav>
+    </header>
+    <div class="container-fluid display-table">
+        <div class="row display-table-row">
+            <div class="col-md-2 display-table-cell valign-top " id="side-menu">
+                <h1>Admin Panel </h1>
+                <ul>
+                    <li class="link active">
+                        <a asp-controller="Admin" asp-action="Index">
+                            <span class="glyphicon glyphicon-th" aria-hidden="true"></span>
+                            <span>Panel</span>
+                        </a>
+                    </li>
+                    <li class="link">
+                        <a asp-controller="IlanlarYeni" asp-action="Index">
+                            <span class="glyphicon glyphicon-list-alt" aria-hidden="true"></span>
+                            <span>İlanlar</span>
+                        </a>
+                    </li>
+
+                </ul>
+            </div>
+            <div class="col-md-10">
+                @RenderBody()
+            </div>
+        </div>
+    </div>
+   
+
+    <script type="text/javascript" src="~/lib/bootstrap/dist/js/bootstrap.min.js"></script>
+    <script type="text/javascript" src="~/lib/jquery/dist/jquery.min.js"></script>
+</body>
+</html>
