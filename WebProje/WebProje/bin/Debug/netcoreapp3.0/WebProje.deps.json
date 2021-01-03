@@ -318,6 +318,14 @@
         "runtime": {
           "WebProje.dll": {}
         },
+        "resources": {
+          "en/WebProje.resources.dll": {
+            "locale": "en"
+          },
+          "tr/WebProje.resources.dll": {
+            "locale": "tr"
+          }
+        },
         "compile": {
           "WebProje.dll": {}
         }

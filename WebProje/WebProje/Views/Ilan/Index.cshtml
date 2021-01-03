@@ -1,0 +1,82 @@
+﻿@model IEnumerable<WebProje.Models.Ilanlar>
+@inject Microsoft.AspNetCore.Mvc.Localization.IViewLocalizer localizer
+@{
+    ViewData["Title"] = "Yuva Arayanlar";
+    if (User.Identity.IsAuthenticated)
+    {
+        if (User.IsInRole("Admin"))
+        {
+            Layout = "~/Views/Shared/_LayoutAdmin.cshtml";
+        }
+        else
+        {
+            Layout = "~/Views/Shared/_Layout.cshtml";
+        }
+
+    }
+    else
+    {
+        Layout = "~/Views/Shared/_Layout.cshtml";
+    }
+
+}
+@{
+    if (User.Identity.IsAuthenticated)
+    {
+        if (User.IsInRole("Admin"))
+        {
+            <p>
+
+                <a asp-controller="Ilan" asp-action="Create">@localizer["btnCreate"]</a>
+            </p>
+        }
+
+    }
+}
+<div class="container area">
+    @foreach (var item in Model)
+    {
+    <a asp-controller="Home" asp-action="Contact">
+        <div class="row">
+            <div>
+                <div class="row" style="padding-top:10px;padding-bottom:20px;padding-right:10px;">
+                    <div class="col-md-6 ilan_resim">
+                        <img src="@("/ilanResimleri/"+item.resim)" />
+                    </div>
+                    <div class="col-md-6 ilan_icerik row">
+                        <div class="alan col-md-6">
+                            <div> @Html.DisplayFor(modelItem => item.ilanNo)</div>
+                            <div>@Enum.GetName(typeof(HayvanTuruEnum), item.hayvan.hayvanTuruId))</div>
+                            <div>@Html.DisplayFor(modelItem => item.hayvan.hayvanCinsi)</div>
+
+                        </div>
+                        <div class="alan col-md-6">
+                            <div> @Html.DisplayFor(modelItem => item.hayvan.hayvanCinsiyeti)</div>
+                            <div>@Html.DisplayFor(modelItem => item.hayvan.hayvanYasi)</div>
+                            <div>@Html.DisplayFor(modelItem => item.ilanTarihi)</div>
+                        </div>
+                    </div>
+                    @{
+                        if (User.Identity.IsAuthenticated)
+                        {
+                            if (User.IsInRole("Admin"))
+                            {
+                                <div class="row duzenle">
+                                    <td>
+                                        <a asp-action="Edit" asp-route-id="@item.ilanID">@localizer["edit"]</a> |
+                                        <a asp-action="Details" asp-route-id="@item.ilanID">@localizer["details"]</a> |
+                                        <a asp-action="Delete" asp-route-id="@item.ilanID">@localizer["delete"]</a>
+                                    </td>
+                                </div>
+                            }
+                        }
+                    }
+
+                </div>
+            </div>
+
+        </div>
+    </a>
+    }
+
+</div>

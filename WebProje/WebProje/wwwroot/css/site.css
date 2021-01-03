@@ -62,7 +62,7 @@ html {
 body {
     /* Margin bottom by footer height */
     margin-bottom: 60px;
-    background-image: url(../img/anasayfa.png);
+  
     height: 100% !important;
     width: 100% !important;
 }
@@ -78,3 +78,47 @@ body {
     height:100% !important;
     width: 100% !important;
 }
+.sol_menu {
+    background-color: white !important;
+    border: 1px solid #80808033;
+    padding: 18px 10px;
+    border-radius:10px;
+}
+.ilan_resim {
+    padding-right:10px;
+    width: 25%;
+    height: 350px;
+    float: left;
+    overflow: hidden;
+    object-fit: cover;
+    display: table-column-group;
+}
+.ilan_icerik {
+    width:60%;
+    float:left;
+}
+.alan {
+    float:left;
+    padding:10px;
+    width: 30%;
+    color:#707070;
+}
+.duzenle{
+    width:20%;
+    float:left;
+    padding-bottom:20px;
+    padding-top : 10px;
+}
+
+#contact .card:hover i, #contact .card:hover h4 {
+    color: #87d37c;
+}
+.hero-image {
+    background-image: url("../img/anasayfa.png");
+    background-color: #cccccc;
+    height: 700px;
+    background-position: center;
+    background-repeat: no-repeat;
+    background-size: cover;
+}
+

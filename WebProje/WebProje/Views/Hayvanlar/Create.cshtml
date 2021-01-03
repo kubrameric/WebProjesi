@@ -1,0 +1,50 @@
+﻿@model WebProje.Models.Hayvanlar
+@inject Microsoft.AspNetCore.Mvc.Localization.IViewLocalizer localizer
+@{
+    ViewData["Title"] = "Yeni Kayıt";
+    if (User.Identity.IsAuthenticated)
+    {
+        if (User.IsInRole("Admin"))
+        {
+            Layout = "~/Views/Shared/_LayoutAdmin.cshtml";
+        }
+
+    }
+}
+<h4>@localizer["hayvanlar"]</h4>
+<hr />
+<div class="row">
+    <div class="col-md-4">
+        <form asp-action="Create">
+            <div asp-validation-summary="ModelOnly" class="text-danger"></div>
+            <div class="form-group">
+                <label asp-for="hayvanTuruId" class="control-label"></label>
+                @Html.DropDownListFor(m => m.hayvanTuruId, Html.GetEnumSelectList<HayvanTuruEnum>(), new { @class = "form-control" })
+                <span asp-validation-for="hayvanTuruId" class="text-danger"></span>
+            </div>
+            <div class="form-group">
+                <label asp-for="hayvanYasi" class="control-label"></label>
+                <input asp-for="hayvanYasi" class="form-control" />
+                <span asp-validation-for="hayvanYasi" class="text-danger"></span>
+            </div>
+            <div class="form-group">
+                <label asp-for="hayvanCinsi" class="control-label"></label>
+                <input asp-for="hayvanCinsi" class="form-control" />
+                <span asp-validation-for="hayvanCinsi" class="text-danger"></span>
+            </div>
+            <div class="form-group">
+                <label asp-for="hayvanCinsiyeti" class="control-label"></label>
+                <input asp-for="hayvanCinsiyeti" class="form-control" />
+                <span asp-validation-for="hayvanCinsiyeti" class="text-danger"></span>
+            </div>
+            <div class="form-group">
+                <input type="submit" value="Create" class="btn btn-primary" />
+            </div>
+        </form>
+    </div>
+</div>
+
+
+@section Scripts {
+    @{await Html.RenderPartialAsync("_ValidationScriptsPartial");}
+}

@@ -1,4 +1,17 @@
-﻿<!DOCTYPE html>
+﻿@using Microsoft.AspNetCore.Builder
+@using Microsoft.AspNetCore.Localization
+@using Microsoft.Extensions.Options
+@inject Microsoft.AspNetCore.Mvc.Localization.IViewLocalizer localizer
+@inject IOptions<RequestLocalizationOptions> locOptions
+
+@{
+    var requestCulture = Context.Features.Get<IRequestCultureFeature>();
+    var cultureItems = locOptions.Value.SupportedUICultures
+        .Select(culture => new SelectListItem { Value = culture.Name, Text = culture.DisplayName })
+        .ToList();
+}
+
+<!DOCTYPE html>
 <html lang="tr">
 <head>
     <meta charset="utf-8" />
@@ -7,11 +20,11 @@
     <link rel="stylesheet" href="~/lib/bootstrap/dist/css/bootstrap.min.css" />
     <link rel="stylesheet" href="~/css/site.css" />
 </head>
-<body >
+<body>
     <header>
         <nav class="navbar navbar-expand-sm navbar-toggleable-sm navbar-light bg-white border-bottom box-shadow mb-3">
             <div class="container">
-                <a class="navbar-brand" asp-area="" asp-controller="Home" asp-action="Index">WebProje</a>
+                <a class="navbar-brand" asp-area="" asp-controller="Home" asp-action="Index">@localizer["webSitesi"]</a>
                 <button class="navbar-toggler" type="button" data-toggle="collapse" data-target=".navbar-collapse" aria-controls="navbarSupportedContent"
                         aria-expanded="false" aria-label="Toggle navigation">
                     <span class="navbar-toggler-icon"></span>
@@ -25,16 +38,19 @@
                                 if (User.IsInRole("Admin"))
                                 {
                                     <li class="nav-item">
-                                        <a class="nav-link text-dark" asp-area="" asp-controller="Admin" asp-action="Index">Admin Panel</a>
+                                        <a class="nav-link text-dark" asp-area="" asp-controller="Admin" asp-action="Index">@localizer["adminPanel"]</a>
                                     </li>
                                 }
                             }
                         }
                         <li class="nav-item">
-                            <a class="nav-link text-dark" asp-area="" asp-controller="Home" asp-action="Index">Anasayfa</a>
+                            <a class="nav-link text-dark" asp-area="" asp-controller="Home" asp-action="Index">@localizer["anasayfa"]</a>
                         </li>
                         <li class="nav-item">
-                            <a class="nav-link text-dark" asp-area="" asp-controller="Ilanlar" asp-action="Index">Yuva Arayanlar</a>
+                            <a class="nav-link text-dark" asp-area="" asp-controller="Ilan" asp-action="Index">@localizer["ilanlar"]</a>
+                        </li>
+                        <li class="nav-link">
+                            <partial name="_Culture" />
                         </li>
                     </ul>
                 </div>
@@ -49,12 +65,12 @@
 
     <footer class="border-top footer text-muted">
         <div class="container">
-            &copy; 2020 - WebProje - <a asp-area="" asp-controller="Home" asp-action="Privacy">Privacy</a>
+            &copy; 2020 - WebProje - <a asp-area="" asp-controller="Ilan" asp-action="Index">İlanlar</a>
         </div>
     </footer>
     <script src="~/lib/jquery/dist/jquery.min.js"></script>
     <script src="~/lib/bootstrap/dist/js/bootstrap.bundle.min.js"></script>
-    <script src="~/js/site.js" asp-append-version="true"></script>
+    <script src="~/js/site.js"></script>
     @RenderSection("Scripts", required: false)
 </body>
 </html>
